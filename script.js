@@ -88,10 +88,35 @@ var specialCharacters = [
     'Z'
   ];
   // Function to prompt user for password options
-function getPasswordOptions() {
-// Asking for the required password length
-var length = prompt("Enter the length of the password (between 8 and 128 characters):");
-}
+  function getPasswordOptions() {
+    // Asking for the required password length
+    var length = prompt("Enter the length of the password (between 8 and 128 characters):");
+  
+    // Validate the input
+    if (length === null || isNaN(length) || length < 8 || length > 128) {
+      alert("Invalid length. Please enter a number between 8 and 128.");
+      return null;
+    }
+  
+    // Confirm the inclusion of character types
+    var includeLowercase = confirm("Include lowercase characters?");
+    var includeUppercase = confirm("Include uppercase characters?");
+    var includeNumeric = confirm("Include numeric characters?");
+    var includeSpecial = confirm("Include special characters?");
+  
+    // Validate that at least one character type is selected
+    if (!includeLowercase && !includeUppercase && !includeNumeric && !includeSpecial) {
+      alert("At least one character type must be selected.");
+      return null;
+    }
+    return {
+      length: parseInt(length),
+      includeLowercase: includeLowercase,
+      includeUppercase: includeUppercase,
+      includeNumeric: includeNumeric,
+      includeSpecial: includeSpecial
+    };
+  }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
