@@ -17,7 +17,7 @@ Based on your answers, the password generator will create a secure password for 
 
 You'll see your new password on the page! You can use this password for your accounts to keep them safe.
 
-Link to the webpage :https://kevindsouza7.github.io/Password-Generator-/
+Link to the web app :https://kevindsouza7.github.io/Password-Generator-/
 
 Files
 index.html: This is the main page of the password generator.
