@@ -131,7 +131,15 @@ function generatePassword() {
   if (!options) {
     return "";
   }
-  
+  var allChars = "";
+  var password = "";
+
+  // Combining character together
+  if (options.includeLowercase) allChars += lowerCasedCharacters.join('');
+  if (options.includeUppercase) allChars += upperCasedCharacters.join('');
+  if (options.includeNumeric) allChars += numericCharacters.join('');
+  if (options.includeSpecial) allChars += specialCharacters.join('');
+
 
 }
 
