@@ -89,7 +89,8 @@ var specialCharacters = [
   ];
   // Function to prompt user for password options
 function getPasswordOptions() {
-
+// Asking for the required password length
+var length = prompt("Enter the length of the password (between 8 and 128 characters):");
 }
 
 // Function for getting a random element from an array
