@@ -141,6 +141,13 @@ function generatePassword() {
   if (options.includeSpecial) allChars += specialCharacters.join('');
 
 
+  // Generate the password
+for (var i = 0; i < options.length; i++) {
+  password += getRandom(allChars);
+}
+
+return password;
+
 }
 
 // Get references to the #generate element
