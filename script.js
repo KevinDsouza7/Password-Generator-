@@ -120,11 +120,18 @@ var specialCharacters = [
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  return arr[Math.floor(Math.random() * arr.length)];
 }
 
 // Function to generate password with user input
 function generatePassword() {
+  var options = getPasswordOptions();
+
+  // Return an empty if options arent valid
+  if (!options) {
+    return "";
+  }
+  
 
 }
 
